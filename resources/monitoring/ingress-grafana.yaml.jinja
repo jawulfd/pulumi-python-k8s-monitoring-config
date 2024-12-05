@@ -1,0 +1,16 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-grafana
+  namespace: {{monitoring_namespace}}
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`grafana.jauwlfd.com`)
+      priority: 10
+      services:
+        - name: monitoring-grafana
+          port: http-web
+  tls: {}
