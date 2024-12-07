@@ -8,7 +8,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`prometheus.jauwlfd.com`)
+      match: Host(`{{prometheus_domain}}`)
       priority: 10
       services:
         - name: monitoring-kube-prometheus-prometheus

@@ -8,7 +8,7 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`grafana.jauwlfd.com`)
+      match: Host(`{{grafana_domain}}`)
       priority: 10
       services:
         - name: monitoring-grafana

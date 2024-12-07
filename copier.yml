@@ -6,3 +6,11 @@ project_name:
 monitoring_namespace:
     type: str
     help: What is your Monitoring Namespace?
+
+grafana_domain:
+    type: str
+    help: What is your grafana domain?
+
+prometheus_domain:
+    type: str
+    help: What is your prometheus domain?
